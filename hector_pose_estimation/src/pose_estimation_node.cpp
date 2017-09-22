@@ -78,7 +78,7 @@ bool PoseEstimationNode::init() {
     return false;
   }
 
-  imu_subscriber_        = getNodeHandle().subscribe("raw_imu", 10, &PoseEstimationNode::imuCallback, this);
+  imu_subscriber_        = getNodeHandle().subscribe("/multisense/imu/imu_data", 10, &PoseEstimationNode::imuCallback, this);
 #if defined(USE_HECTOR_UAV_MSGS)
   baro_subscriber_       = getNodeHandle().subscribe("altimeter", 10, &PoseEstimationNode::baroCallback, this);
 #else

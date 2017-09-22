@@ -1,0 +1,3 @@
+<launch>  
+  <node pkg="hector_pose_estimation" type="pose_estimation" name="hector_pose_estimation" output="screen" />
+</launch>
